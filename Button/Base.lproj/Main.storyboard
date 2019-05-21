@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QE1-WF-Ty5">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--State-->
+        <scene sceneID="ogy-yS-Scv">
+            <objects>
+                <viewController title="State" id="QE1-WF-Ty5" customClass="ViewController" customModule="Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33u-9K-kIK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUU-3N-2s3">
+                                <rect key="frame" x="16" y="813" width="382" height="29"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Highlighted"/>
+                                    <segment title="Selected"/>
+                                    <segment title="Disabled"/>
+                                </segments>
+                                <connections>
+                                    <action selector="stateChanged:" destination="QE1-WF-Ty5" eventType="valueChanged" id="x9i-6V-bih"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUi-Ng-rQO">
+                                <rect key="frame" x="121" y="401.5" width="172" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Ow2-0l-nCR"/>
+                                    <constraint firstAttribute="height" constant="93" id="yTk-Ma-jqs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDragInside" id="75Y-2s-2c7"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDown" id="CDL-e5-ioO"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDownRepeat" id="MLd-x4-Crz"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="primaryActionTriggered" id="NxC-K0-HGo"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchUpOutside" id="SJX-oW-OFw"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDragOutside" id="TeR-Rm-qRg"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDragEnter" id="YTj-Og-YdK"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchDragExit" id="c3N-SG-FNw"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchUpInside" id="c5Q-A8-H3C"/>
+                                    <action selector="report:" destination="QE1-WF-Ty5" eventType="touchCancel" id="rrR-86-qcP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msD-DL-2Yx">
+                                <rect key="frame" x="186" y="94" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WEG-BJ-UGF" firstAttribute="trailing" secondItem="jUU-3N-2s3" secondAttribute="trailing" constant="16" id="12A-V3-aBA"/>
+                            <constraint firstItem="WEG-BJ-UGF" firstAttribute="bottom" secondItem="jUU-3N-2s3" secondAttribute="bottom" constant="21" id="7nk-bb-Ijg"/>
+                            <constraint firstItem="jUU-3N-2s3" firstAttribute="leading" secondItem="WEG-BJ-UGF" secondAttribute="leading" constant="16" id="EQ1-py-xkn"/>
+                            <constraint firstItem="OUi-Ng-rQO" firstAttribute="centerY" secondItem="33u-9K-kIK" secondAttribute="centerY" id="QJt-zf-ign"/>
+                            <constraint firstItem="OUi-Ng-rQO" firstAttribute="centerX" secondItem="33u-9K-kIK" secondAttribute="centerX" id="hhd-rd-ZcX"/>
+                            <constraint firstItem="msD-DL-2Yx" firstAttribute="centerX" secondItem="33u-9K-kIK" secondAttribute="centerX" id="rgv-My-hFa"/>
+                            <constraint firstItem="msD-DL-2Yx" firstAttribute="top" secondItem="WEG-BJ-UGF" secondAttribute="top" constant="50" id="t8E-Ay-OH9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WEG-BJ-UGF"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="OUi-Ng-rQO" id="Z9u-dD-eee"/>
+                        <outlet property="stateLabel" destination="msD-DL-2Yx" id="XPI-sr-smR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdZ-b5-ztn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="139"/>
+        </scene>
+    </scenes>
+</document>
